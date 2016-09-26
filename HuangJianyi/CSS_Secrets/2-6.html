@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>复杂的背景图案</title>
+</head>
+<style type="text/css">
+	.sizeS{
+		margin: 0 auto;
+	 	width: 315px;
+	 	height: 315px;
+	}
+	.sizeS1{
+		margin: 0 auto;
+	 	width: 315px;
+	 	height: 215px;
+	}
+/*	body {
+		width: 100vh;
+		height: 100vh;
+		background-image: radial-gradient(ellipse farthest-corner at 470px 47px , #FFFF80 20%, rgba(204, 153, 153, 0.4) 30%, #E6E6FF 60%);
+	}	*/
+
+/*	background: radial-gradient(center, shape, size, start-color, ..., last-color);
+		center：渐变起点的位置，可以为百分比，默认是图形的正中心。
+
+		shape：渐变的形状，ellipse表示椭圆形，circle表示圆形。默认为ellipse，如果元素形状为正方形的元素，则ellipse和circle显示一样。
+
+		size：渐变的大小，即渐变到哪里停止，它有四个值。 closest-side：最近边； farthest-side：最远边； closest-corner：最近角； farthest-corner：最远角*/
+
+
+	.backC1{
+		background: white;
+		background-image: 
+			linear-gradient(90deg, rgba(200, 0, 0, 0.5) 50%, transparent 0), 
+			linear-gradient(rgba(200, 0, 0,0.5) 50%, transparent 0);
+		background-size: 30px 30px;
+	}
+	.backC2{
+		background: white;
+		background-image: 
+			linear-gradient(90deg, rgba(200, 0, 0, 0.5) 1px, transparent 0), 
+			linear-gradient(rgba(200, 0, 0,0.5) 1px, transparent 0);
+		background-size: 40px 40px;
+	}
+	.backC3{
+		background: radial-gradient(circle at 0% 50%, 
+			rgba(96, 16, 48, 0) 9px, #613 10px, 
+			rgba(96, 16, 48, 0) 11px) 0px 10px,
+			radial-gradient(at 100% 100%, 
+			rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px),
+			#8a3;
+			background-size: 20px 20px;
+	}
+	.backC4{
+		background:
+			linear-gradient(45deg, #92baac 45px, transparent 45px)64px 64px,
+			linear-gradient(45deg, #92baac 45px, transparent 45px,transparent 91px, #e1ebbd 91px, #e1ebbd 135px, transparent 135px),
+			linear-gradient(-45deg, #92baac 23px, transparent 23px, transparent 68px,#92baac 68px,#92baac 113px,transparent 113px,transparent 158px,#92baac 158px);
+			background-color:#e1ebbd;
+			background-size: 128px 128px;
+	}
+	.backC5{
+		background-color:white;
+		background-image:
+		radial-gradient(midnightblue 9px, transparent 10px),        
+		repeating-radial-gradient(midnightblue 0, midnightblue 4px, transparent 5px, transparent 20px, midnightblue 21px, midnightblue 25px, transparent 26px, transparent 50px);    
+		background-size: 30px 30px, 90px 90px; 
+		background-position: 0 0;
+	}
+
+	.divC1 { background: radial-gradient(closest-side at 60% 40%, blue, green, yellow, black); }
+	.divC2 { background: radial-gradient(farthest-side at 60% 40%, blue, green, yellow, black); }
+	.divC3 { background: radial-gradient(closest-corner at 60% 40%, blue, green, yellow, black); }
+	.divC4 { background: radial-gradient(farthest-corner at 60% 40%, blue, green, yellow, black); }
+
+	/*波点*/
+	.spot{
+		background: #655;
+		background-image: radial-gradient(tan 15%, transparent 0),
+			radial-gradient(tan 15%, transparent 0);
+		background-size: 30px 30px;
+		background-position: 0 0, 15px 15px;
+	}
+
+	.pie {
+		position: relative;
+		width: 100px;
+		height: 100px;
+		border-radius: 100%;
+		background: yellow;
+		background-image: linear-gradient(to right, transparent 50%, blue 0);
+		/*overflow: hidden;*/
+	}
+
+	.pie::before {
+		content: '';
+		display: block;
+		margin-left: 50%;
+		height: 100%;
+		border-radius: 0 100% 100% 0 / 50%;
+		background-color: inherit;
+		transform-origin: left;
+		transform: rotate(190deg);
+		-webkit-animation: rtt 5s linear infinite alternate;
+	}
+
+	.pie::after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -40px 0 0 -40px;
+		width: 80px;
+		height: 80px;
+		border-radius: 100%;
+		background: white;
+	}
+
+	@-webkit-keyframes rtt
+	{
+		0%   {transform: rotate(0deg);background-color: inherit;}
+		49.98%  {transform: rotate(180deg);background-color: inherit;}
+		49.99%  {transform: rotate(0deg);background-color: inherit;}
+		50%  {transform: rotate(0deg);background-color: blue;}
+		100% {transform: rotate(180deg);background-color: blue;}
+	}
+
+	.chessboard{
+		background: #eee;
+		background-image: linear-gradient(45deg, #bbb 25%, transparent 0), 
+			linear-gradient(45deg, transparent 75%, #bbb 0),
+			linear-gradient(45deg, #bbb 25%, transparent 0), 
+			linear-gradient(45deg, transparent 75%, #bbb 0);
+		background-size: 100% 100%;
+		background-position: 0 0, 50% 50%, 50% 50%, 0 0;
+	}
+	.chessboard1{
+		background: white;
+		background-image: linear-gradient(45deg, rgba(0,0,0,0.25) 25%, transparent 0,transparent 75%, rgba(0,0,0,0.25) 0), 
+			linear-gradient(45deg, rgba(0,0,0,0.25) 25%, transparent 0,transparent 75%, rgba(0,0,0,0.25) 0);
+		background-size: 30px 30px;
+		background-position: 0 0, 15px 15px
+	}
+</style>
+<body>
+	<a href="http://lea.verou.me/css3patterns/">http://lea.verou.me/css3patterns/</a>
+	
+	<div class="sizeS backC2"></div>
+  <div class="sizeS backC1"></div>
+
+  <div class="sizeS spot"></div>
+	<div class="sizeS chessboard"></div>
+	<div class="sizeS chessboard1"></div>
+  <div class="pie"></div>
+
+  <div class="sizeS1 divC1"></div>
+  <div class="sizeS1 divC2"></div>
+  <div class="sizeS1 divC3"></div>
+  <div class="sizeS1 divC4"></div>
+
+  <div class="sizeS backC3"></div>
+	<div class="sizeS backC4"></div>
+	<div class="sizeS backC5"></div>
+</body>
+</html>

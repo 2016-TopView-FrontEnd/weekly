@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>条纹背景</title>
+</head>
+<style type="text/css">
+	.sizeS{
+		padding: 10px;
+		margin: 5px auto;
+		width: 200px;
+		height: 200px;
+		/*background-color: purple; */
+	}
+	.backC1{
+		background: linear-gradient(#fb3, #58a);
+	}
+	.backC2{
+		background: linear-gradient(#fb3 20%, #58a 80%);
+	}
+	.backC3{
+		background: linear-gradient(#fb3 50%, #58a 50%);
+		background-size: 100% 30px;
+	}
+	.backC4{
+		background: linear-gradient(#fb3 30%, #58a 30%);
+		background-size: 100% 30px;
+	}
+	.backC5{
+		/*<p>n种颜色，分 100% / (n-1)</p>*/
+		background: linear-gradient(#fb3 25%, #58a 0, #58a 50%, gray 0, gray 75%, black 0);
+		background-size: 100% 30px;
+	}
+
+	/*垂直条纹*/
+	.backC6{
+		background: linear-gradient(to right, #fb3 25%, #58a 0, #58a 50%, gray 0, gray 75%, black 0);
+		background-size: 30px 100%;
+	}
+
+	/*斜向条纹*/
+	.backC7{
+		/*除了0，45，90，135，180度，其它角度用处不大*/
+		background: linear-gradient(45deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0);
+		background-size: 42.426406871px 42.426406871px; /*根据勾股定理让条纹厚度为15px*/
+	}
+	.backC8{
+		background: repeating-linear-gradient(45deg, #fb3, #58a 30px);
+	}
+	.backC9{
+		background: repeating-linear-gradient(45deg, #fb3, #fb3 15px, #58a 0, #58a 30px);
+	}
+	.backC10{
+		background: repeating-linear-gradient(60deg, #fb3, #fb3 15px, #58a 0, #58a 30px);
+	}
+	.backC11{
+		/*尚未支持*/
+		background: repeating-linear-gradient(60deg, #fb3 0 15px, #58a 0 30px);
+	}
+	.backC12{
+		background: #58a;
+		background-image: repeating-linear-gradient(
+			30deg, 
+			hsla(0, 0%, 100%, 0.1), 
+			hsla(0, 0%, 100%, 0.1) 15px, 
+			transparent 0, transparent 30px);
+	}
+</style>
+<body>
+	<div class="sizeS backC12"></div>
+	<!-- <div class="sizeS backC11"></div> -->
+	<div class="sizeS backC10"></div>
+	<div class="sizeS backC9"></div>
+	<div class="sizeS backC8"></div>
+	<div class="sizeS backC7"></div>
+	<div class="sizeS backC6"></div>
+	<div class="sizeS backC5"></div>
+	<div class="sizeS backC4"></div>
+	<div class="sizeS backC3"></div>
+	<div class="sizeS backC2"></div>
+	<div class="sizeS backC1"></div>
+</body>
+</html>

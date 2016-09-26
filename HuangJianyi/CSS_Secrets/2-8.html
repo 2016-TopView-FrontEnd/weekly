@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>连续图像边框</title>
+</head>
+<style type="text/css">
+	.sizeS{
+		margin: 0 auto;
+	 	width: 200px;
+	 	height: 200px;
+	}
+	.bgpC{
+		padding: 1em;
+		border: 1em solid transparent;
+		background: linear-gradient(white, white), url(../pic/1.jpg);
+		background-size: cover;
+		background-clip: padding-box, border-box; /*默认padding-box，影响背景图片渗透到的位置*/
+		background-origin: border-box; /*默认border-box，影响size、position这些属性起作用时的起点*/
+	}
+	.bgpC1{
+		padding: 1em;
+		border: 1em solid transparent;
+		background: linear-gradient(white, white) padding-box,
+								repeating-linear-gradient(-45deg, 
+								red 0, red 12.5%,
+								transparent 0, transparent 25%,
+								#58a 0, #58a 37.5%,
+								transparent 0, transparent 50%);
+		background-size: 5em 5em;
+	}
+	@-webkit-keyframes ants {
+		to {  
+			background-position: 100%;
+		}
+	}
+	.bgpC2{
+		padding: 1em;
+		border: 1px solid transparent;
+		background: linear-gradient(white, white) padding-box,
+								repeating-linear-gradient(-45deg, 
+								black 0, black 25%, white 0, white 50%
+								) 0 / 0.6em 0.6em;
+		-webkit-animation: ants 12s linear infinite;
+	}
+</style>
+<body>
+<div class="sizeS bgpC"></div>
+<div class="sizeS bgpC1">123</div>
+<div class="sizeS bgpC2"></div>
+</body>
+</html>

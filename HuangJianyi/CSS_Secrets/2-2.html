@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>多重边框</title>
+</head>
+<!-- <link rel="stylesheet" type="text/css" href="../JQuery/jquery-3.1.0.min.js"> -->
+<style type="text/css">
+	body{
+		background: white;
+	}
+	.sizeS{
+		margin: 0 auto;
+	 	width: 200px;
+	 	height: 200px;
+	 	background-color: purple; 
+	}
+	.boxS{
+	 box-shadow: 0 0 0 10px #655, 0 0 0 15px deeppink;
+	}
+	.outlineS{
+		margin-top: 100px;
+		padding: 50px;
+		/*border:10px gray solid;*/
+		outline: 5px dotted deeppink;
+		outline-offset: -15px;
+	}
+	.radiusS{
+		border-radius: 5px;
+	}
+	.borderC{
+		border:10px gray solid;
+	}
+</style>
+<body>
+	<div class="sizeS boxS">
+	  用box-shadow制作的边框无点击事件
+	</div>
+	<div class="sizeS outlineS">
+	  outline
+	</div>
+	<div class="sizeS radiusS boxS">
+		border无法贴合radius,box-shadow可以
+	</div>
+</body>
+</html>
