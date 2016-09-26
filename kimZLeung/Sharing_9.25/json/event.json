@@ -1,0 +1,20 @@
+{
+	"fields": ["name", "number", "type", "level", "attr", "time", "acTime"],
+    "data": [{
+        "name": "Lisa",
+        "number": "lisa@simpsons.com",
+        "type": "555-111-1224",
+        "level": "放大镜",
+        "attr": "attr",
+        "time": "time",
+        "acTime": "acTime"
+    }, {
+        "name": "lucy",
+        "number": "lisa@simpsons.com",
+        "type": "gagagagagaggaggaag",
+        "level": "hahahgwwgew",
+        "attr": "gasdfs",
+        "time": "fasdfas",
+        "acTime": "asfas"
+    }],
+}

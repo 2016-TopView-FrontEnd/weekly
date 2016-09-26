@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Radio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="ext-6.0.1/build/classic/theme-triton/resources/theme-triton-all.css" />
+</head>
+<body>
+	<script type="text/javascript" src="ext-6.0.1/ext-bootstrap.js"></script>
+	<script type="text/javascript">
+		Ext.onReady(function() {
+			var radio = Ext.create({
+				itemId: 'firstRow',
+				xtype: 'fieldcontainer',
+				defaultType: 'radiofield',
+				// fieldLabel: 'Size',
+				defaults: {
+					flex: 1,
+					margin: '100px 80px 0px 80px',
+					listeners: {
+						change: function(self,isCheck) {
+							if(isCheck) {
+								if(self.timeout) {
+									clearTimeout(self.timeout);
+								}
+								if(this.getValue() && self.next()) {
+									self.timeout = setTimeout(function() {
+										Ext.getCmp(self.next().getId()).setValue(true);
+									}, 500);
+								}
+								else if(!self.next()) {
+									self.timeout = setTimeout(function() {
+										self.setValue(false);
+										Ext.getCmp('radio6').setValue(true);
+									}, 500);
+								}
+							}
+						}
+					}
+				},
+				layout: 'hbox',
+				items: [{
+					name: 'size',
+					inputValue: '1',
+					id: 'radio1',
+				}, {
+					name: 'size',
+					inputValue: '2',
+					id: 'radio2',
+				}, {
+					name: 'size',
+					inputValue: '3',
+					id: 'radio3',
+				}, ],
+			});
+
+			var radioo = Ext.create({
+				itemId: 'secRow',
+				xtype: 'fieldcontainer',
+				defaultType: 'radiofield',
+				// fieldLabel: 'Size',
+				defaults: {
+					flex: 1,
+					margin: '0px 80px',
+					listeners: {
+						change: function(self,isCheck) {
+							if(isCheck) { 
+								if(self.timeout) {
+									clearTimeout(self.timeout);
+								}
+								if(this.getValue() && self.prev()) {
+									self.timeout = setTimeout(function() {
+										Ext.getCmp(self.prev().getId()).setValue(true);
+									}, 500);
+								}
+								else if(!self.prev()) {
+									self.timeout = setTimeout(function() {
+										self.setValue(false);
+										Ext.getCmp('radio1').setValue(true);
+									}, 500);
+								}
+							}
+						}
+					}
+				},
+				layout: 'hbox',
+				items: [{
+					name: 'box',
+					inputValue: '3',
+					id: 'radio4',
+				}, {
+					name: 'box',
+					inputValue: '2',
+					id: 'radio5',
+				}, {
+					name: 'box',
+					inputValue: '1',
+					id: 'radio6',
+				}, ],
+			});
+
+			Ext.create({
+				xtype: 'window',
+				title: 'RadioMove',
+				width: 600,
+				height: 600,
+				items: [radio, radioo],
+				bbar: [{
+					text: 'normalStart!',
+					handler: function() {
+						Ext.getCmp('radio1').setValue(true);
+					}
+				}, '->', {
+					text: 'Stop!',
+					handler: function() {
+						clearTimeout(Ext.getCmp('radio1').timeout);
+						clearTimeout(Ext.getCmp('radio2').timeout);
+						clearTimeout(Ext.getCmp('radio3').timeout);
+						clearTimeout(Ext.getCmp('radio4').timeout);
+						clearTimeout(Ext.getCmp('radio5').timeout);
+						clearTimeout(Ext.getCmp('radio6').timeout);
+						Ext.getCmp('radio1').setValue(false);
+						Ext.getCmp('radio2').setValue(false);
+						Ext.getCmp('radio3').setValue(false);
+						Ext.getCmp('radio4').setValue(false);
+						Ext.getCmp('radio5').setValue(false);
+						Ext.getCmp('radio6').setValue(false);
+					}
+				}],
+				renderTo: Ext.getBody()
+			}).show();
+		});
+	</script>
+</body>
+</html>

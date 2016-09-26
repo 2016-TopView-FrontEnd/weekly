@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Layout_toolbarGrid</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="ext-6.0.1/build/classic/theme-triton/resources/theme-triton-all.css" />
+</head>
+<body>
+	<script type="text/javascript" src="ext-6.0.1/ext-bootstrap.js"></script>
+	<script type="text/javascript">
+		Ext.onReady(function() {
+			var gridStore = Ext.create('Ext.data.Store', {
+				storeId: 'grid',
+				autoLoad: false,
+				fields: ['name', 'number', 'type', 'level', 'attr', 'time', 'acTime'],
+				proxy: {
+					type: 'ajax',
+					url: 'json/event.json',
+					reader: {
+						type: 'json',
+						rootProperty: 'data'
+					}
+				},
+				listeners: {
+					beforeload: function() {
+						msgTip = Ext.MessageBox.show({
+							title: 'tips',
+							message: 'Dead-Server加载中...',
+							showAnimation: {
+								type: 'slideIn',
+							 	duration: 250,
+							  	easing: 'ease-out' 
+							}
+						});
+					},
+					load: function() {
+						msgTip.hide();
+					}
+				},
+			});
+			// gridStore.load({
+			// 	params: {
+			// 		start: 2,
+			// 		limit: 2,
+			// 	}
+			// });
+
+			var toolBar = Ext.create({
+				xtype: 'form',
+				region: 'north',
+				// flex: 2,
+				layout: 'hbox',
+				overflowHandler: 'menu',
+				// layout: {
+				// 		type: 'hbox',
+				// 		align: 'stretch',  
+				// 		pack: 'start',
+				// 	},
+				// overflowHandler: 'menu',
+				defaults: {
+					border: false,
+				},
+				items: [{
+					xtype: 'panel',
+					margin: '20px 0px',
+					defaultType: 'textfield',
+					flex: 4,
+					items: [{
+						fieldLabel: '事件名称',
+						width: '100%',
+						labelWidth: 60,
+						style: 'padding:5px 10px 0px 10px;',
+					}, {
+						fieldLabel: '受理单号',
+						width: '100%',
+						labelWidth: 60,
+						style: 'padding:5px 10px 0px 10px;',
+					}]
+				}, {
+					xtype: 'panel',
+					margin: '20px 0px',
+					itemId: 'getTime',
+					defaultType: 'textfield',
+					flex: 4,
+					items: [{
+						fieldLabel: '事件类型',
+						width: '100%',
+						labelWidth: 60,
+						style: 'padding:5px 10px 0px 10px;',
+					}, {
+						fieldLabel: '事发时间',
+						itemId: 'startTime',
+						xtype: 'datefield',
+						maxValue: new Date(),
+						width: '100%',
+						labelWidth: 60,
+						style: 'padding:5px 10px 0px 10px;',
+					}]
+				}, {
+					xtype: 'panel',
+					margin: '20px 0px',
+					defaultType: 'textfield',
+					flex: 4,
+					items: [{
+						fieldLabel: '事件等级',
+						width: '100%',
+						labelWidth: 60,
+						style: 'padding:5px 10px 0px 10px;',
+					}, {
+						fieldLabel: '到',
+						xtype: 'datefield',
+						width: '100%',
+						labelWidth: 30,
+						style: 'padding:5px 10px 0px 10px;',
+					}]
+				}, {
+					xtype: 'toolbar',
+					flex: 1,
+					margin: '30px 0px',
+					// layout: 'vbox',
+					overflowHandler: 'menu',
+					items: [{
+						xtype: 'button',
+						text: '重置',
+						// width: '100%',
+						// flex: 1,
+						formBind: true,
+						style: 'margin:10px 0px;',
+						handler: function() {
+							this.up('form').reset();
+						}
+					}, {
+						xtype: 'button',
+						text: '查询',
+						// width: '100%',
+						// flex: 1,
+						formBind: true,
+						style: 'margin:10px 0px;',
+						handler: function() {
+							Ext.data.StoreManager.lookup('grid').load({
+								params: {
+									start: 2,
+									limit: 2,
+									time: this.up('form').getComponent('getTime').getComponent('startTime').value
+								}
+							});
+						}
+					}]
+				}],
+			});
+
+			var grid = Ext.create({
+				xtype: 'grid',
+				// flex: 7,
+				width: '100%',
+				region: 'center',
+				store: gridStore,
+				columns: [{
+					text: '事件名称',
+					dataIndex: 'name',
+					flex: 3
+				}, {
+					text: '受理单号',
+					dataIndex: 'number',
+					flex: 2
+				}, {
+					text: '事件类型',
+					dataIndex: 'type',
+					flex: 1
+				}, {
+					text: '事件等级',
+					dataIndex: 'level',
+					flex: 1
+				}, {
+					text: '事件状态',
+					dataIndex: 'attr',
+					flex: 1
+				}, {
+					text: '事发时间',
+					dataIndex: 'time',
+					flex: 3
+				}, {
+					text: '接报时间',
+					dataIndex: 'acTime',
+					flex: 2
+				}],
+				// renderTo: Ext.getBody()
+			});
+
+			Ext.create({
+				xtype: 'viewport',
+				width: '100%',
+				// minWidth: 800,
+				// layout: {
+				// 		type: 'vbox',
+				// 		align: 'stretch',  
+				// 		pack: 'start',
+				// 	},
+				layout: 'border',
+				// listeners: {
+				// 	resize: function() {
+				// 		this.setHeight(this.getWidth() * 0.7);
+				// 	}
+				// },
+				items: [{
+					xtype: 'pagingtoolbar',
+					store: gridStore,
+					// dock: 'bottom',
+					region: 'south',
+					displayInfo: true,
+					displayMsg: '当前显示 {0} - {1} 条，共 {2} 条',
+					emptyMsg: '无显示数据',
+				}, toolBar, grid],
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Layout_hb_vb</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="ext-6.0.1/build/classic/theme-triton/resources/theme-triton-all.css" />
+</head>
+<body>
+	<script type="text/javascript" src="ext-6.0.1/ext-bootstrap.js"></script>
+	<script type="text/javascript">
+		Ext.onReady(function() {
+			Ext.create({
+				xtype: 'panel',
+				title: '最大的',
+				width: '100%',
+				height: 800,
+				layout: {
+					type: 'hbox',
+					// align: 'stretch',  
+    				// pack: 'start',
+				},
+				items: [{
+					xtype: 'panel',
+					title: 'left',
+					height: 600,
+					layout: {
+						type: 'vbox',
+						// align: 'stretch',  
+    		// 			pack: 'start',
+					},
+					flex: 1,
+					items: [{	
+						xtype: 'panel',
+						title: 'top',
+						flex: 1,
+					}, {
+						xtype: 'panel',
+						title: 'bottom',
+						flex: 2,
+					}],
+				}, {
+					xtype: 'panel',
+					title: 'right',
+					height: 600,
+					flex: 1,
+				}],	
+				renderTo: Ext.getBody(),
+			});
+		});
+	</script>
+</body>
+</html>

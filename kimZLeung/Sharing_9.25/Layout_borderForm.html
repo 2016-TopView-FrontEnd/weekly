@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Layout_borderForm</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="ext-6.0.1/build/classic/theme-triton/resources/theme-triton-all.css" />
+</head>
+<body>
+	<script type="text/javascript" src="ext-6.0.1/ext-bootstrap.js"></script>
+	<script type="text/javascript">
+		Ext.onReady(function() {
+			Ext.create({
+				xtype: 'viewport',
+				layout: 'border',
+				// layout: {
+				// 	type: 'vbox',
+				// 	align: 'stretch',
+				// 	pack: 'justify'
+				// },
+				autoHeight: true,
+				// split: {
+				// 	size: 0,
+				// },
+				// height: '100px',
+				items: [{
+					xtype: 'panel',
+					title: '事件',
+					width: '100%',
+					border: false,
+					region: 'north',
+					flex: 1,
+					layout: 'column',
+					items: [{
+						xtype: 'panel',
+						columnWidth: .33,
+						defaultType: 'textfield',
+						border: false,
+						items: [{
+								fieldLabel: '受理单号',
+								width: '100%',
+								labelWidth: 60,
+								style: 'padding:5px 10px 0px 10px;',
+							}, {
+								fieldLabel: '事发地点',
+								width: '100%',
+								labelWidth: 60,
+								style: 'padding:5px 10px 0px 10px;',
+							}, {
+								fieldLabel: '事件类型',
+								width: '100%',
+								labelWidth: 60,
+								style: 'padding:5px 10px 0px 10px;',
+							}, {
+								fieldLabel: '事件状态',
+								width: '100%',
+								labelWidth: 60,
+								style: 'padding:5px 10px 0px 10px;',
+							}, {
+								fieldLabel: '失踪人数',
+								width: '100%',
+								labelWidth: 60,
+								style: 'padding:5px 10px 0px 10px;',
+							}, {
+								fieldLabel: '报送人',
+								width: '100%',
+								labelWidth: 60,
+								style: 'padding:5px 10px 0px 10px;',
+							}, {
+								fieldLabel: '接送人',
+								width: '100%',
+								labelWidth: 60,
+								style: 'padding:5px 10px 0px 10px;',
+							}]
+						}, {
+							xtype: 'panel',
+							columnWidth: .33,
+							defaultType: 'textfield',
+							border: false,
+							items: [
+								{
+									fieldLabel:'事件名称',
+									width: '100%',
+									labelWidth: 60,
+									style: 'padding:5px 10px 0px 10px;',
+								}, {
+									fieldLabel:'经度',
+									width: '100%',
+									labelWidth: 60,
+									style: 'padding:5px 10px 0px 10px;',
+								}, {
+									fieldLabel:'事件小类',
+									width: '100%',
+									labelWidth: 60,
+									style: 'padding:5px 10px 0px 10px;',
+								}, {
+									fieldLabel:'死亡人数',
+									width: '100%',
+									labelWidth: 60,
+									style: 'padding:5px 10px 0px 10px;',
+								}, {
+									fieldLabel:'受困人数',
+									width: '100%',
+									labelWidth: 60,
+									style: 'padding:5px 10px 0px 10px;',
+								}, {
+									fieldLabel:'联系方式',
+									width: '100%',
+									labelWidth: 60,
+									style: 'padding:5px 10px 0px 10px;',
+								}, {
+									fieldLabel:'接报事件',
+									width: '100%',
+									labelWidth: 60,
+									style: 'padding:5px 10px 0px 10px;',
+								}]
+							}, {
+								xtype: 'panel',
+								columnWidth: .33,
+								defaultType: 'textfield',
+								border: false,
+								items: [
+									{
+										fieldLabel:'案发时间',
+										width: '100%',
+										labelWidth: 60,
+										style: 'padding:5px 10px 0px 10px;',
+									}, {
+										fieldLabel:'纬度',
+										width: '100%',
+										labelWidth: 60,
+										style: 'padding:5px 10px 0px 10px;',
+									}, {
+										fieldLabel:'事件等级',
+										width: '100%',
+										labelWidth: 60,
+										style: 'padding:5px 10px 0px 10px;',
+									}, {
+										fieldLabel:'受伤人数',
+										width: '100%',
+										labelWidth: 60,
+										style: 'padding:5px 10px 0px 10px;',
+									}, {
+										xtype: 'tbspacer',
+										height: 46,
+										style: 'padding:10px;',
+									}, {
+										fieldLabel:'报送时间',
+										width: '100%',
+										labelWidth: 60,
+										style: 'padding:5px 10px 0px 10px;',
+									}]
+							}]}, {
+								xtype: 'panel',
+								region: 'center',
+								border: false,
+								// flex: 2,
+								// layout: 'vbox',
+								layout: {
+									type: 'vbox',
+									align: 'stretch',
+									pack: 'start',
+								},
+								items: [{
+									xtype: 'textareafield',
+									flex: 1,
+									width: '100%',
+									fieldLabel: '事件原因',
+									style: 'padding:10px 10px 10px 10px;',
+								}, {
+									xtype: 'textareafield',
+									flex: 1,
+									width: '100%',
+									fieldLabel: '事件描述',
+									style: 'padding:10px 10px 10px 10px;margin:0px 0px 50px 0px;',
+								}],
+					}],
+				renderTo: Ext.getBody(),
+			});
+		});
+
+	</script>
+</body>
+</html>
