@@ -1,0 +1,1377 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 46, ../sass/screen.scss */
+.swatches li {
+  width: 4.7619047619%;
+  float: left;
+  height: 60px;
+  list-style: none outside none;
+}
+/* line 51, ../sass/screen.scss */
+.swatches li:hover:before {
+  font-family: verdana;
+  font-size: 8px;
+  padding: 2px;
+}
+
+/* line 34, ../sass/screen.scss */
+ul.red li:nth-child(10) {
+  background-color: #eb1f48;
+}
+/* line 38, ../sass/screen.scss */
+ul.red li:nth-child(10):hover:before {
+  content: "#eb1f48";
+  color: #38050f;
+}
+/* line 34, ../sass/screen.scss */
+ul.red li:nth-child(9) {
+  background-color: #ed365b;
+}
+/* line 38, ../sass/screen.scss */
+ul.red li:nth-child(9):hover:before {
+  content: "#ed365b";
+  color: #500716;
+}
+/* line 34, ../sass/screen.scss */
+ul.red li:nth-child(8) {
+  background-color: #ef4e6e;
+}
+/* line 38, ../sass/screen.scss */
+ul.red li:nth-child(8):hover:before {
+  content: "#ef4e6e";
+  color: #67091c;
+}
+/* line 34, ../sass/screen.scss */
+ul.red li:nth-child(7) {
+  background-color: #f16581;
+}
+/* line 38, ../sass/screen.scss */
+ul.red li:nth-child(7):hover:before {
+  content: "#f16581";
+  color: #7f0c23;
+}
+/* line 34, ../sass/screen.scss */
+ul.red li:nth-child(6) {
+  background-color: #f37c94;
+}
+/* line 38, ../sass/screen.scss */
+ul.red li:nth-child(6):hover:before {
+  content: "#f37c94";
+  color: #960e29;
+}
+/* line 34, ../sass/screen.scss */
+ul.red li:nth-child(5) {
+  background-color: #f594a7;
+}
+/* line 38, ../sass/screen.scss */
+ul.red li:nth-child(5):hover:before {
+  content: "#f594a7";
+  color: #ad102f;
+}
+/* line 34, ../sass/screen.scss */
+ul.red li:nth-child(4) {
+  background-color: #f7abba;
+}
+/* line 38, ../sass/screen.scss */
+ul.red li:nth-child(4):hover:before {
+  content: "#f7abba";
+  color: #c51236;
+}
+/* line 34, ../sass/screen.scss */
+ul.red li:nth-child(3) {
+  background-color: #fac3ce;
+}
+/* line 38, ../sass/screen.scss */
+ul.red li:nth-child(3):hover:before {
+  content: "#fac3ce";
+  color: crimson;
+}
+/* line 34, ../sass/screen.scss */
+ul.red li:nth-child(2) {
+  background-color: #fcdae1;
+}
+/* line 38, ../sass/screen.scss */
+ul.red li:nth-child(2):hover:before {
+  content: "#fcdae1";
+  color: #eb1f48;
+}
+/* line 34, ../sass/screen.scss */
+ul.red li:nth-child(1) {
+  background-color: #fef1f4;
+}
+/* line 38, ../sass/screen.scss */
+ul.red li:nth-child(1):hover:before {
+  content: "#fef1f4";
+  color: #ed365b;
+}
+/* line 19, ../sass/screen.scss */
+ul.red li:nth-child(12) {
+  background-color: #c51236;
+}
+/* line 23, ../sass/screen.scss */
+ul.red li:nth-child(12):hover:before {
+  content: "#c51236";
+  color: #f7abba;
+}
+/* line 19, ../sass/screen.scss */
+ul.red li:nth-child(13) {
+  background-color: #ad102f;
+}
+/* line 23, ../sass/screen.scss */
+ul.red li:nth-child(13):hover:before {
+  content: "#ad102f";
+  color: #f594a7;
+}
+/* line 19, ../sass/screen.scss */
+ul.red li:nth-child(14) {
+  background-color: #960e29;
+}
+/* line 23, ../sass/screen.scss */
+ul.red li:nth-child(14):hover:before {
+  content: "#960e29";
+  color: #f37c94;
+}
+/* line 19, ../sass/screen.scss */
+ul.red li:nth-child(15) {
+  background-color: #7f0c23;
+}
+/* line 23, ../sass/screen.scss */
+ul.red li:nth-child(15):hover:before {
+  content: "#7f0c23";
+  color: #f16581;
+}
+/* line 19, ../sass/screen.scss */
+ul.red li:nth-child(16) {
+  background-color: #67091c;
+}
+/* line 23, ../sass/screen.scss */
+ul.red li:nth-child(16):hover:before {
+  content: "#67091c";
+  color: #ef4e6e;
+}
+/* line 19, ../sass/screen.scss */
+ul.red li:nth-child(17) {
+  background-color: #500716;
+}
+/* line 23, ../sass/screen.scss */
+ul.red li:nth-child(17):hover:before {
+  content: "#500716";
+  color: #ed365b;
+}
+/* line 19, ../sass/screen.scss */
+ul.red li:nth-child(18) {
+  background-color: #38050f;
+}
+/* line 23, ../sass/screen.scss */
+ul.red li:nth-child(18):hover:before {
+  content: "#38050f";
+  color: #eb1f48;
+}
+/* line 19, ../sass/screen.scss */
+ul.red li:nth-child(19) {
+  background-color: #210309;
+}
+/* line 23, ../sass/screen.scss */
+ul.red li:nth-child(19):hover:before {
+  content: "#210309";
+  color: crimson;
+}
+/* line 19, ../sass/screen.scss */
+ul.red li:nth-child(20) {
+  background-color: #0a0103;
+}
+/* line 23, ../sass/screen.scss */
+ul.red li:nth-child(20):hover:before {
+  content: "#0a0103";
+  color: #c51236;
+}
+/* line 19, ../sass/screen.scss */
+ul.red li:nth-child(21) {
+  background-color: black;
+}
+/* line 23, ../sass/screen.scss */
+ul.red li:nth-child(21):hover:before {
+  content: "black";
+  color: #bb1133;
+}
+/* line 63, ../sass/screen.scss */
+ul.red li:nth-child(11) {
+  background-color: #DC143C;
+}
+
+/* line 34, ../sass/screen.scss */
+ul.orange li:nth-child(10) {
+  background-color: #f4882f;
+}
+/* line 38, ../sass/screen.scss */
+ul.orange li:nth-child(10):hover:before {
+  content: "#f4882f";
+  color: #532804;
+}
+/* line 34, ../sass/screen.scss */
+ul.orange li:nth-child(9) {
+  background-color: #f69647;
+}
+/* line 38, ../sass/screen.scss */
+ul.orange li:nth-child(9):hover:before {
+  content: "#f69647";
+  color: #6b3305;
+}
+/* line 34, ../sass/screen.scss */
+ul.orange li:nth-child(8) {
+  background-color: #f7a35f;
+}
+/* line 38, ../sass/screen.scss */
+ul.orange li:nth-child(8):hover:before {
+  content: "#f7a35f";
+  color: #833f07;
+}
+/* line 34, ../sass/screen.scss */
+ul.orange li:nth-child(7) {
+  background-color: #f8b177;
+}
+/* line 38, ../sass/screen.scss */
+ul.orange li:nth-child(7):hover:before {
+  content: "#f8b177";
+  color: #9c4a08;
+}
+/* line 34, ../sass/screen.scss */
+ul.orange li:nth-child(6) {
+  background-color: #f9bf90;
+}
+/* line 38, ../sass/screen.scss */
+ul.orange li:nth-child(6):hover:before {
+  content: "#f9bf90";
+  color: #b45609;
+}
+/* line 34, ../sass/screen.scss */
+ul.orange li:nth-child(5) {
+  background-color: #fbcda8;
+}
+/* line 38, ../sass/screen.scss */
+ul.orange li:nth-child(5):hover:before {
+  content: "#fbcda8";
+  color: #cc620a;
+}
+/* line 34, ../sass/screen.scss */
+ul.orange li:nth-child(4) {
+  background-color: #fcdbc0;
+}
+/* line 38, ../sass/screen.scss */
+ul.orange li:nth-child(4):hover:before {
+  content: "#fcdbc0";
+  color: #e46d0c;
+}
+/* line 34, ../sass/screen.scss */
+ul.orange li:nth-child(3) {
+  background-color: #fde9d8;
+}
+/* line 38, ../sass/screen.scss */
+ul.orange li:nth-child(3):hover:before {
+  content: "#fde9d8";
+  color: #f37a16;
+}
+/* line 34, ../sass/screen.scss */
+ul.orange li:nth-child(2) {
+  background-color: #fef7f1;
+}
+/* line 38, ../sass/screen.scss */
+ul.orange li:nth-child(2):hover:before {
+  content: "#fef7f1";
+  color: #f4882f;
+}
+/* line 34, ../sass/screen.scss */
+ul.orange li:nth-child(1) {
+  background-color: white;
+}
+/* line 38, ../sass/screen.scss */
+ul.orange li:nth-child(1):hover:before {
+  content: "white";
+  color: #f5903d;
+}
+/* line 19, ../sass/screen.scss */
+ul.orange li:nth-child(12) {
+  background-color: #e46d0c;
+}
+/* line 23, ../sass/screen.scss */
+ul.orange li:nth-child(12):hover:before {
+  content: "#e46d0c";
+  color: #fcdbc0;
+}
+/* line 19, ../sass/screen.scss */
+ul.orange li:nth-child(13) {
+  background-color: #cc620a;
+}
+/* line 23, ../sass/screen.scss */
+ul.orange li:nth-child(13):hover:before {
+  content: "#cc620a";
+  color: #fbcda8;
+}
+/* line 19, ../sass/screen.scss */
+ul.orange li:nth-child(14) {
+  background-color: #b45609;
+}
+/* line 23, ../sass/screen.scss */
+ul.orange li:nth-child(14):hover:before {
+  content: "#b45609";
+  color: #f9bf90;
+}
+/* line 19, ../sass/screen.scss */
+ul.orange li:nth-child(15) {
+  background-color: #9c4a08;
+}
+/* line 23, ../sass/screen.scss */
+ul.orange li:nth-child(15):hover:before {
+  content: "#9c4a08";
+  color: #f8b177;
+}
+/* line 19, ../sass/screen.scss */
+ul.orange li:nth-child(16) {
+  background-color: #833f07;
+}
+/* line 23, ../sass/screen.scss */
+ul.orange li:nth-child(16):hover:before {
+  content: "#833f07";
+  color: #f7a35f;
+}
+/* line 19, ../sass/screen.scss */
+ul.orange li:nth-child(17) {
+  background-color: #6b3305;
+}
+/* line 23, ../sass/screen.scss */
+ul.orange li:nth-child(17):hover:before {
+  content: "#6b3305";
+  color: #f69647;
+}
+/* line 19, ../sass/screen.scss */
+ul.orange li:nth-child(18) {
+  background-color: #532804;
+}
+/* line 23, ../sass/screen.scss */
+ul.orange li:nth-child(18):hover:before {
+  content: "#532804";
+  color: #f4882f;
+}
+/* line 19, ../sass/screen.scss */
+ul.orange li:nth-child(19) {
+  background-color: #3b1c03;
+}
+/* line 23, ../sass/screen.scss */
+ul.orange li:nth-child(19):hover:before {
+  content: "#3b1c03";
+  color: #f37a16;
+}
+/* line 19, ../sass/screen.scss */
+ul.orange li:nth-child(20) {
+  background-color: #221002;
+}
+/* line 23, ../sass/screen.scss */
+ul.orange li:nth-child(20):hover:before {
+  content: "#221002";
+  color: #e46d0c;
+}
+/* line 19, ../sass/screen.scss */
+ul.orange li:nth-child(21) {
+  background-color: #0a0501;
+}
+/* line 23, ../sass/screen.scss */
+ul.orange li:nth-child(21):hover:before {
+  content: "#0a0501";
+  color: #cc620a;
+}
+/* line 63, ../sass/screen.scss */
+ul.orange li:nth-child(11) {
+  background-color: #f37a16;
+}
+
+/* line 34, ../sass/screen.scss */
+ul.yellow li:nth-child(10) {
+  background-color: #fbe02d;
+}
+/* line 38, ../sass/screen.scss */
+ul.yellow li:nth-child(10):hover:before {
+  content: "#fbe02d";
+  color: #5a4f02;
+}
+/* line 34, ../sass/screen.scss */
+ul.yellow li:nth-child(9) {
+  background-color: #fce346;
+}
+/* line 38, ../sass/screen.scss */
+ul.yellow li:nth-child(9):hover:before {
+  content: "#fce346";
+  color: #736402;
+}
+/* line 34, ../sass/screen.scss */
+ul.yellow li:nth-child(8) {
+  background-color: #fce75f;
+}
+/* line 38, ../sass/screen.scss */
+ul.yellow li:nth-child(8):hover:before {
+  content: "#fce75f";
+  color: #8c7a03;
+}
+/* line 34, ../sass/screen.scss */
+ul.yellow li:nth-child(7) {
+  background-color: #fceb78;
+}
+/* line 38, ../sass/screen.scss */
+ul.yellow li:nth-child(7):hover:before {
+  content: "#fceb78";
+  color: #a69003;
+}
+/* line 34, ../sass/screen.scss */
+ul.yellow li:nth-child(6) {
+  background-color: #fdef91;
+}
+/* line 38, ../sass/screen.scss */
+ul.yellow li:nth-child(6):hover:before {
+  content: "#fdef91";
+  color: #bfa604;
+}
+/* line 34, ../sass/screen.scss */
+ul.yellow li:nth-child(5) {
+  background-color: #fdf2aa;
+}
+/* line 38, ../sass/screen.scss */
+ul.yellow li:nth-child(5):hover:before {
+  content: "#fdf2aa";
+  color: #d8bb04;
+}
+/* line 34, ../sass/screen.scss */
+ul.yellow li:nth-child(4) {
+  background-color: #fef6c3;
+}
+/* line 38, ../sass/screen.scss */
+ul.yellow li:nth-child(4):hover:before {
+  content: "#fef6c3";
+  color: #f1d104;
+}
+/* line 34, ../sass/screen.scss */
+ul.yellow li:nth-child(3) {
+  background-color: #fefadc;
+}
+/* line 38, ../sass/screen.scss */
+ul.yellow li:nth-child(3):hover:before {
+  content: "#fefadc";
+  color: #fbdc14;
+}
+/* line 34, ../sass/screen.scss */
+ul.yellow li:nth-child(2) {
+  background-color: #fffef5;
+}
+/* line 38, ../sass/screen.scss */
+ul.yellow li:nth-child(2):hover:before {
+  content: "#fffef5";
+  color: #fbe02d;
+}
+/* line 34, ../sass/screen.scss */
+ul.yellow li:nth-child(1) {
+  background-color: white;
+}
+/* line 38, ../sass/screen.scss */
+ul.yellow li:nth-child(1):hover:before {
+  content: "white";
+  color: #fbe137;
+}
+/* line 19, ../sass/screen.scss */
+ul.yellow li:nth-child(12) {
+  background-color: #f1d104;
+}
+/* line 23, ../sass/screen.scss */
+ul.yellow li:nth-child(12):hover:before {
+  content: "#f1d104";
+  color: #fef6c3;
+}
+/* line 19, ../sass/screen.scss */
+ul.yellow li:nth-child(13) {
+  background-color: #d8bb04;
+}
+/* line 23, ../sass/screen.scss */
+ul.yellow li:nth-child(13):hover:before {
+  content: "#d8bb04";
+  color: #fdf2aa;
+}
+/* line 19, ../sass/screen.scss */
+ul.yellow li:nth-child(14) {
+  background-color: #bfa604;
+}
+/* line 23, ../sass/screen.scss */
+ul.yellow li:nth-child(14):hover:before {
+  content: "#bfa604";
+  color: #fdef91;
+}
+/* line 19, ../sass/screen.scss */
+ul.yellow li:nth-child(15) {
+  background-color: #a69003;
+}
+/* line 23, ../sass/screen.scss */
+ul.yellow li:nth-child(15):hover:before {
+  content: "#a69003";
+  color: #fceb78;
+}
+/* line 19, ../sass/screen.scss */
+ul.yellow li:nth-child(16) {
+  background-color: #8c7a03;
+}
+/* line 23, ../sass/screen.scss */
+ul.yellow li:nth-child(16):hover:before {
+  content: "#8c7a03";
+  color: #fce75f;
+}
+/* line 19, ../sass/screen.scss */
+ul.yellow li:nth-child(17) {
+  background-color: #736402;
+}
+/* line 23, ../sass/screen.scss */
+ul.yellow li:nth-child(17):hover:before {
+  content: "#736402";
+  color: #fce346;
+}
+/* line 19, ../sass/screen.scss */
+ul.yellow li:nth-child(18) {
+  background-color: #5a4f02;
+}
+/* line 23, ../sass/screen.scss */
+ul.yellow li:nth-child(18):hover:before {
+  content: "#5a4f02";
+  color: #fbe02d;
+}
+/* line 19, ../sass/screen.scss */
+ul.yellow li:nth-child(19) {
+  background-color: #413901;
+}
+/* line 23, ../sass/screen.scss */
+ul.yellow li:nth-child(19):hover:before {
+  content: "#413901";
+  color: #fbdc14;
+}
+/* line 19, ../sass/screen.scss */
+ul.yellow li:nth-child(20) {
+  background-color: #282301;
+}
+/* line 23, ../sass/screen.scss */
+ul.yellow li:nth-child(20):hover:before {
+  content: "#282301";
+  color: #f1d104;
+}
+/* line 19, ../sass/screen.scss */
+ul.yellow li:nth-child(21) {
+  background-color: #0f0d00;
+}
+/* line 23, ../sass/screen.scss */
+ul.yellow li:nth-child(21):hover:before {
+  content: "#0f0d00";
+  color: #d8bb04;
+}
+/* line 63, ../sass/screen.scss */
+ul.yellow li:nth-child(11) {
+  background-color: #fbdc14;
+}
+
+/* line 34, ../sass/screen.scss */
+ul.green li:nth-child(10) {
+  background-color: #80dc24;
+}
+/* line 38, ../sass/screen.scss */
+ul.green li:nth-child(10):hover:before {
+  content: "#80dc24";
+  color: #1a2c07;
+}
+/* line 34, ../sass/screen.scss */
+ul.green li:nth-child(9) {
+  background-color: #8cdf3a;
+}
+/* line 38, ../sass/screen.scss */
+ul.green li:nth-child(9):hover:before {
+  content: "#8cdf3a";
+  color: #26420b;
+}
+/* line 34, ../sass/screen.scss */
+ul.green li:nth-child(8) {
+  background-color: #99e34f;
+}
+/* line 38, ../sass/screen.scss */
+ul.green li:nth-child(8):hover:before {
+  content: "#99e34f";
+  color: #33580e;
+}
+/* line 34, ../sass/screen.scss */
+ul.green li:nth-child(7) {
+  background-color: #a6e665;
+}
+/* line 38, ../sass/screen.scss */
+ul.green li:nth-child(7):hover:before {
+  content: "#a6e665";
+  color: #406e12;
+}
+/* line 34, ../sass/screen.scss */
+ul.green li:nth-child(6) {
+  background-color: #b3ea7b;
+}
+/* line 38, ../sass/screen.scss */
+ul.green li:nth-child(6):hover:before {
+  content: "#b3ea7b";
+  color: #4d8415;
+}
+/* line 34, ../sass/screen.scss */
+ul.green li:nth-child(5) {
+  background-color: #bfed91;
+}
+/* line 38, ../sass/screen.scss */
+ul.green li:nth-child(5):hover:before {
+  content: "#bfed91";
+  color: #599a19;
+}
+/* line 34, ../sass/screen.scss */
+ul.green li:nth-child(4) {
+  background-color: #ccf1a7;
+}
+/* line 38, ../sass/screen.scss */
+ul.green li:nth-child(4):hover:before {
+  content: "#ccf1a7";
+  color: #66b01c;
+}
+/* line 34, ../sass/screen.scss */
+ul.green li:nth-child(3) {
+  background-color: #d9f4bd;
+}
+/* line 38, ../sass/screen.scss */
+ul.green li:nth-child(3):hover:before {
+  content: "#d9f4bd";
+  color: #73c620;
+}
+/* line 34, ../sass/screen.scss */
+ul.green li:nth-child(2) {
+  background-color: #e6f8d3;
+}
+/* line 38, ../sass/screen.scss */
+ul.green li:nth-child(2):hover:before {
+  content: "#e6f8d3";
+  color: #80dc24;
+}
+/* line 34, ../sass/screen.scss */
+ul.green li:nth-child(1) {
+  background-color: #f2fce9;
+}
+/* line 38, ../sass/screen.scss */
+ul.green li:nth-child(1):hover:before {
+  content: "#f2fce9";
+  color: #8cdf3a;
+}
+/* line 19, ../sass/screen.scss */
+ul.green li:nth-child(12) {
+  background-color: #66b01c;
+}
+/* line 23, ../sass/screen.scss */
+ul.green li:nth-child(12):hover:before {
+  content: "#66b01c";
+  color: #ccf1a7;
+}
+/* line 19, ../sass/screen.scss */
+ul.green li:nth-child(13) {
+  background-color: #599a19;
+}
+/* line 23, ../sass/screen.scss */
+ul.green li:nth-child(13):hover:before {
+  content: "#599a19";
+  color: #bfed91;
+}
+/* line 19, ../sass/screen.scss */
+ul.green li:nth-child(14) {
+  background-color: #4d8415;
+}
+/* line 23, ../sass/screen.scss */
+ul.green li:nth-child(14):hover:before {
+  content: "#4d8415";
+  color: #b3ea7b;
+}
+/* line 19, ../sass/screen.scss */
+ul.green li:nth-child(15) {
+  background-color: #406e12;
+}
+/* line 23, ../sass/screen.scss */
+ul.green li:nth-child(15):hover:before {
+  content: "#406e12";
+  color: #a6e665;
+}
+/* line 19, ../sass/screen.scss */
+ul.green li:nth-child(16) {
+  background-color: #33580e;
+}
+/* line 23, ../sass/screen.scss */
+ul.green li:nth-child(16):hover:before {
+  content: "#33580e";
+  color: #99e34f;
+}
+/* line 19, ../sass/screen.scss */
+ul.green li:nth-child(17) {
+  background-color: #26420b;
+}
+/* line 23, ../sass/screen.scss */
+ul.green li:nth-child(17):hover:before {
+  content: "#26420b";
+  color: #8cdf3a;
+}
+/* line 19, ../sass/screen.scss */
+ul.green li:nth-child(18) {
+  background-color: #1a2c07;
+}
+/* line 23, ../sass/screen.scss */
+ul.green li:nth-child(18):hover:before {
+  content: "#1a2c07";
+  color: #80dc24;
+}
+/* line 19, ../sass/screen.scss */
+ul.green li:nth-child(19) {
+  background-color: #0d1604;
+}
+/* line 23, ../sass/screen.scss */
+ul.green li:nth-child(19):hover:before {
+  content: "#0d1604";
+  color: #73c620;
+}
+/* line 19, ../sass/screen.scss */
+ul.green li:nth-child(20) {
+  background-color: black;
+}
+/* line 23, ../sass/screen.scss */
+ul.green li:nth-child(20):hover:before {
+  content: "black";
+  color: #66b01c;
+}
+/* line 19, ../sass/screen.scss */
+ul.green li:nth-child(21) {
+  background-color: black;
+}
+/* line 23, ../sass/screen.scss */
+ul.green li:nth-child(21):hover:before {
+  content: "black";
+  color: #66b01c;
+}
+/* line 63, ../sass/screen.scss */
+ul.green li:nth-child(11) {
+  background-color: #73c620;
+}
+
+/* line 34, ../sass/screen.scss */
+ul.blue li:nth-child(10) {
+  background-color: #14cbeb;
+}
+/* line 38, ../sass/screen.scss */
+ul.blue li:nth-child(10):hover:before {
+  content: "#14cbeb";
+  color: #04292f;
+}
+/* line 34, ../sass/screen.scss */
+ul.blue li:nth-child(9) {
+  background-color: #2cd0ed;
+}
+/* line 38, ../sass/screen.scss */
+ul.blue li:nth-child(9):hover:before {
+  content: "#2cd0ed";
+  color: #063d47;
+}
+/* line 34, ../sass/screen.scss */
+ul.blue li:nth-child(8) {
+  background-color: #43d5ef;
+}
+/* line 38, ../sass/screen.scss */
+ul.blue li:nth-child(8):hover:before {
+  content: "#43d5ef";
+  color: #08515e;
+}
+/* line 34, ../sass/screen.scss */
+ul.blue li:nth-child(7) {
+  background-color: #5bdaf1;
+}
+/* line 38, ../sass/screen.scss */
+ul.blue li:nth-child(7):hover:before {
+  content: "#5bdaf1";
+  color: #0a6676;
+}
+/* line 34, ../sass/screen.scss */
+ul.blue li:nth-child(6) {
+  background-color: #72e0f3;
+}
+/* line 38, ../sass/screen.scss */
+ul.blue li:nth-child(6):hover:before {
+  content: "#72e0f3";
+  color: #0c7a8d;
+}
+/* line 34, ../sass/screen.scss */
+ul.blue li:nth-child(5) {
+  background-color: #8ae5f5;
+}
+/* line 38, ../sass/screen.scss */
+ul.blue li:nth-child(5):hover:before {
+  content: "#8ae5f5";
+  color: #0e8ea5;
+}
+/* line 34, ../sass/screen.scss */
+ul.blue li:nth-child(4) {
+  background-color: #a1eaf7;
+}
+/* line 38, ../sass/screen.scss */
+ul.blue li:nth-child(4):hover:before {
+  content: "#a1eaf7";
+  color: #10a2bc;
+}
+/* line 34, ../sass/screen.scss */
+ul.blue li:nth-child(3) {
+  background-color: #b9eff9;
+}
+/* line 38, ../sass/screen.scss */
+ul.blue li:nth-child(3):hover:before {
+  content: "#b9eff9";
+  color: #12b7d4;
+}
+/* line 34, ../sass/screen.scss */
+ul.blue li:nth-child(2) {
+  background-color: #d0f5fb;
+}
+/* line 38, ../sass/screen.scss */
+ul.blue li:nth-child(2):hover:before {
+  content: "#d0f5fb";
+  color: #14cbeb;
+}
+/* line 34, ../sass/screen.scss */
+ul.blue li:nth-child(1) {
+  background-color: #e8fafd;
+}
+/* line 38, ../sass/screen.scss */
+ul.blue li:nth-child(1):hover:before {
+  content: "#e8fafd";
+  color: #2cd0ed;
+}
+/* line 19, ../sass/screen.scss */
+ul.blue li:nth-child(12) {
+  background-color: #10a2bc;
+}
+/* line 23, ../sass/screen.scss */
+ul.blue li:nth-child(12):hover:before {
+  content: "#10a2bc";
+  color: #a1eaf7;
+}
+/* line 19, ../sass/screen.scss */
+ul.blue li:nth-child(13) {
+  background-color: #0e8ea5;
+}
+/* line 23, ../sass/screen.scss */
+ul.blue li:nth-child(13):hover:before {
+  content: "#0e8ea5";
+  color: #8ae5f5;
+}
+/* line 19, ../sass/screen.scss */
+ul.blue li:nth-child(14) {
+  background-color: #0c7a8d;
+}
+/* line 23, ../sass/screen.scss */
+ul.blue li:nth-child(14):hover:before {
+  content: "#0c7a8d";
+  color: #72e0f3;
+}
+/* line 19, ../sass/screen.scss */
+ul.blue li:nth-child(15) {
+  background-color: #0a6676;
+}
+/* line 23, ../sass/screen.scss */
+ul.blue li:nth-child(15):hover:before {
+  content: "#0a6676";
+  color: #5bdaf1;
+}
+/* line 19, ../sass/screen.scss */
+ul.blue li:nth-child(16) {
+  background-color: #08515e;
+}
+/* line 23, ../sass/screen.scss */
+ul.blue li:nth-child(16):hover:before {
+  content: "#08515e";
+  color: #43d5ef;
+}
+/* line 19, ../sass/screen.scss */
+ul.blue li:nth-child(17) {
+  background-color: #063d47;
+}
+/* line 23, ../sass/screen.scss */
+ul.blue li:nth-child(17):hover:before {
+  content: "#063d47";
+  color: #2cd0ed;
+}
+/* line 19, ../sass/screen.scss */
+ul.blue li:nth-child(18) {
+  background-color: #04292f;
+}
+/* line 23, ../sass/screen.scss */
+ul.blue li:nth-child(18):hover:before {
+  content: "#04292f";
+  color: #14cbeb;
+}
+/* line 19, ../sass/screen.scss */
+ul.blue li:nth-child(19) {
+  background-color: #021518;
+}
+/* line 23, ../sass/screen.scss */
+ul.blue li:nth-child(19):hover:before {
+  content: "#021518";
+  color: #12b7d4;
+}
+/* line 19, ../sass/screen.scss */
+ul.blue li:nth-child(20) {
+  background-color: black;
+}
+/* line 23, ../sass/screen.scss */
+ul.blue li:nth-child(20):hover:before {
+  content: "black";
+  color: #10a2bc;
+}
+/* line 19, ../sass/screen.scss */
+ul.blue li:nth-child(21) {
+  background-color: black;
+}
+/* line 23, ../sass/screen.scss */
+ul.blue li:nth-child(21):hover:before {
+  content: "black";
+  color: #10a2bc;
+}
+/* line 63, ../sass/screen.scss */
+ul.blue li:nth-child(11) {
+  background-color: #12b7d4;
+}
+
+/* line 34, ../sass/screen.scss */
+ul.purple li:nth-child(10) {
+  background-color: #b214eb;
+}
+/* line 38, ../sass/screen.scss */
+ul.purple li:nth-child(10):hover:before {
+  content: "#b214eb";
+  color: #24042f;
+}
+/* line 34, ../sass/screen.scss */
+ul.purple li:nth-child(9) {
+  background-color: #ba2ced;
+}
+/* line 38, ../sass/screen.scss */
+ul.purple li:nth-child(9):hover:before {
+  content: "#ba2ced";
+  color: #360647;
+}
+/* line 34, ../sass/screen.scss */
+ul.purple li:nth-child(8) {
+  background-color: #c143ef;
+}
+/* line 38, ../sass/screen.scss */
+ul.purple li:nth-child(8):hover:before {
+  content: "#c143ef";
+  color: #47085e;
+}
+/* line 34, ../sass/screen.scss */
+ul.purple li:nth-child(7) {
+  background-color: #c95bf1;
+}
+/* line 38, ../sass/screen.scss */
+ul.purple li:nth-child(7):hover:before {
+  content: "#c95bf1";
+  color: #590a76;
+}
+/* line 34, ../sass/screen.scss */
+ul.purple li:nth-child(6) {
+  background-color: #d172f3;
+}
+/* line 38, ../sass/screen.scss */
+ul.purple li:nth-child(6):hover:before {
+  content: "#d172f3";
+  color: #6b0c8d;
+}
+/* line 34, ../sass/screen.scss */
+ul.purple li:nth-child(5) {
+  background-color: #d88af5;
+}
+/* line 38, ../sass/screen.scss */
+ul.purple li:nth-child(5):hover:before {
+  content: "#d88af5";
+  color: #7d0ea5;
+}
+/* line 34, ../sass/screen.scss */
+ul.purple li:nth-child(4) {
+  background-color: #e0a1f7;
+}
+/* line 38, ../sass/screen.scss */
+ul.purple li:nth-child(4):hover:before {
+  content: "#e0a1f7";
+  color: #8e10bc;
+}
+/* line 34, ../sass/screen.scss */
+ul.purple li:nth-child(3) {
+  background-color: #e8b9f9;
+}
+/* line 38, ../sass/screen.scss */
+ul.purple li:nth-child(3):hover:before {
+  content: "#e8b9f9";
+  color: #a012d4;
+}
+/* line 34, ../sass/screen.scss */
+ul.purple li:nth-child(2) {
+  background-color: #f0d0fb;
+}
+/* line 38, ../sass/screen.scss */
+ul.purple li:nth-child(2):hover:before {
+  content: "#f0d0fb";
+  color: #b214eb;
+}
+/* line 34, ../sass/screen.scss */
+ul.purple li:nth-child(1) {
+  background-color: #f7e8fd;
+}
+/* line 38, ../sass/screen.scss */
+ul.purple li:nth-child(1):hover:before {
+  content: "#f7e8fd";
+  color: #ba2ced;
+}
+/* line 19, ../sass/screen.scss */
+ul.purple li:nth-child(12) {
+  background-color: #8e10bc;
+}
+/* line 23, ../sass/screen.scss */
+ul.purple li:nth-child(12):hover:before {
+  content: "#8e10bc";
+  color: #e0a1f7;
+}
+/* line 19, ../sass/screen.scss */
+ul.purple li:nth-child(13) {
+  background-color: #7d0ea5;
+}
+/* line 23, ../sass/screen.scss */
+ul.purple li:nth-child(13):hover:before {
+  content: "#7d0ea5";
+  color: #d88af5;
+}
+/* line 19, ../sass/screen.scss */
+ul.purple li:nth-child(14) {
+  background-color: #6b0c8d;
+}
+/* line 23, ../sass/screen.scss */
+ul.purple li:nth-child(14):hover:before {
+  content: "#6b0c8d";
+  color: #d172f3;
+}
+/* line 19, ../sass/screen.scss */
+ul.purple li:nth-child(15) {
+  background-color: #590a76;
+}
+/* line 23, ../sass/screen.scss */
+ul.purple li:nth-child(15):hover:before {
+  content: "#590a76";
+  color: #c95bf1;
+}
+/* line 19, ../sass/screen.scss */
+ul.purple li:nth-child(16) {
+  background-color: #47085e;
+}
+/* line 23, ../sass/screen.scss */
+ul.purple li:nth-child(16):hover:before {
+  content: "#47085e";
+  color: #c143ef;
+}
+/* line 19, ../sass/screen.scss */
+ul.purple li:nth-child(17) {
+  background-color: #360647;
+}
+/* line 23, ../sass/screen.scss */
+ul.purple li:nth-child(17):hover:before {
+  content: "#360647";
+  color: #ba2ced;
+}
+/* line 19, ../sass/screen.scss */
+ul.purple li:nth-child(18) {
+  background-color: #24042f;
+}
+/* line 23, ../sass/screen.scss */
+ul.purple li:nth-child(18):hover:before {
+  content: "#24042f";
+  color: #b214eb;
+}
+/* line 19, ../sass/screen.scss */
+ul.purple li:nth-child(19) {
+  background-color: #120218;
+}
+/* line 23, ../sass/screen.scss */
+ul.purple li:nth-child(19):hover:before {
+  content: "#120218";
+  color: #a012d4;
+}
+/* line 19, ../sass/screen.scss */
+ul.purple li:nth-child(20) {
+  background-color: black;
+}
+/* line 23, ../sass/screen.scss */
+ul.purple li:nth-child(20):hover:before {
+  content: "black";
+  color: #8e10bc;
+}
+/* line 19, ../sass/screen.scss */
+ul.purple li:nth-child(21) {
+  background-color: black;
+}
+/* line 23, ../sass/screen.scss */
+ul.purple li:nth-child(21):hover:before {
+  content: "black";
+  color: #8e10bc;
+}
+/* line 63, ../sass/screen.scss */
+ul.purple li:nth-child(11) {
+  background-color: #a012d4;
+}
+
+/* line 34, ../sass/screen.scss */
+ul.black li:nth-child(10) {
+  background-color: #848484;
+}
+/* line 38, ../sass/screen.scss */
+ul.black li:nth-child(10):hover:before {
+  content: "#848484";
+  color: #1e1e1e;
+}
+/* line 34, ../sass/screen.scss */
+ul.black li:nth-child(9) {
+  background-color: #919191;
+}
+/* line 38, ../sass/screen.scss */
+ul.black li:nth-child(9):hover:before {
+  content: "#919191";
+  color: #2b2b2b;
+}
+/* line 34, ../sass/screen.scss */
+ul.black li:nth-child(8) {
+  background-color: #9d9d9d;
+}
+/* line 38, ../sass/screen.scss */
+ul.black li:nth-child(8):hover:before {
+  content: "#9d9d9d";
+  color: #373737;
+}
+/* line 34, ../sass/screen.scss */
+ul.black li:nth-child(7) {
+  background-color: #aaaaaa;
+}
+/* line 38, ../sass/screen.scss */
+ul.black li:nth-child(7):hover:before {
+  content: "#aaaaaa";
+  color: #444444;
+}
+/* line 34, ../sass/screen.scss */
+ul.black li:nth-child(6) {
+  background-color: #b7b7b7;
+}
+/* line 38, ../sass/screen.scss */
+ul.black li:nth-child(6):hover:before {
+  content: "#b7b7b7";
+  color: #515151;
+}
+/* line 34, ../sass/screen.scss */
+ul.black li:nth-child(5) {
+  background-color: #c4c4c4;
+}
+/* line 38, ../sass/screen.scss */
+ul.black li:nth-child(5):hover:before {
+  content: "#c4c4c4";
+  color: #5e5e5e;
+}
+/* line 34, ../sass/screen.scss */
+ul.black li:nth-child(4) {
+  background-color: #d0d0d0;
+}
+/* line 38, ../sass/screen.scss */
+ul.black li:nth-child(4):hover:before {
+  content: "#d0d0d0";
+  color: #6a6a6a;
+}
+/* line 34, ../sass/screen.scss */
+ul.black li:nth-child(3) {
+  background-color: #dddddd;
+}
+/* line 38, ../sass/screen.scss */
+ul.black li:nth-child(3):hover:before {
+  content: "#dddddd";
+  color: #777777;
+}
+/* line 34, ../sass/screen.scss */
+ul.black li:nth-child(2) {
+  background-color: #eaeaea;
+}
+/* line 38, ../sass/screen.scss */
+ul.black li:nth-child(2):hover:before {
+  content: "#eaeaea";
+  color: #848484;
+}
+/* line 34, ../sass/screen.scss */
+ul.black li:nth-child(1) {
+  background-color: #f7f7f7;
+}
+/* line 38, ../sass/screen.scss */
+ul.black li:nth-child(1):hover:before {
+  content: "#f7f7f7";
+  color: #919191;
+}
+/* line 19, ../sass/screen.scss */
+ul.black li:nth-child(12) {
+  background-color: #6a6a6a;
+}
+/* line 23, ../sass/screen.scss */
+ul.black li:nth-child(12):hover:before {
+  content: "#6a6a6a";
+  color: #d0d0d0;
+}
+/* line 19, ../sass/screen.scss */
+ul.black li:nth-child(13) {
+  background-color: #5e5e5e;
+}
+/* line 23, ../sass/screen.scss */
+ul.black li:nth-child(13):hover:before {
+  content: "#5e5e5e";
+  color: #c4c4c4;
+}
+/* line 19, ../sass/screen.scss */
+ul.black li:nth-child(14) {
+  background-color: #515151;
+}
+/* line 23, ../sass/screen.scss */
+ul.black li:nth-child(14):hover:before {
+  content: "#515151";
+  color: #b7b7b7;
+}
+/* line 19, ../sass/screen.scss */
+ul.black li:nth-child(15) {
+  background-color: #444444;
+}
+/* line 23, ../sass/screen.scss */
+ul.black li:nth-child(15):hover:before {
+  content: "#444444";
+  color: #aaaaaa;
+}
+/* line 19, ../sass/screen.scss */
+ul.black li:nth-child(16) {
+  background-color: #373737;
+}
+/* line 23, ../sass/screen.scss */
+ul.black li:nth-child(16):hover:before {
+  content: "#373737";
+  color: #9d9d9d;
+}
+/* line 19, ../sass/screen.scss */
+ul.black li:nth-child(17) {
+  background-color: #2b2b2b;
+}
+/* line 23, ../sass/screen.scss */
+ul.black li:nth-child(17):hover:before {
+  content: "#2b2b2b";
+  color: #919191;
+}
+/* line 19, ../sass/screen.scss */
+ul.black li:nth-child(18) {
+  background-color: #1e1e1e;
+}
+/* line 23, ../sass/screen.scss */
+ul.black li:nth-child(18):hover:before {
+  content: "#1e1e1e";
+  color: #848484;
+}
+/* line 19, ../sass/screen.scss */
+ul.black li:nth-child(19) {
+  background-color: #111111;
+}
+/* line 23, ../sass/screen.scss */
+ul.black li:nth-child(19):hover:before {
+  content: "#111111";
+  color: #777777;
+}
+/* line 19, ../sass/screen.scss */
+ul.black li:nth-child(20) {
+  background-color: #040404;
+}
+/* line 23, ../sass/screen.scss */
+ul.black li:nth-child(20):hover:before {
+  content: "#040404";
+  color: #6a6a6a;
+}
+/* line 19, ../sass/screen.scss */
+ul.black li:nth-child(21) {
+  background-color: black;
+}
+/* line 23, ../sass/screen.scss */
+ul.black li:nth-child(21):hover:before {
+  content: "black";
+  color: #666666;
+}
+/* line 63, ../sass/screen.scss */
+ul.black li:nth-child(11) {
+  background-color: #777;
+}

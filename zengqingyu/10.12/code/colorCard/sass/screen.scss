@@ -1,0 +1,76 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+$red: #DC143C; // Base
+$orange: saturate(lighten(adjust_hue($red, 39), 5), 7);   //#f37a16
+$yellow: saturate(lighten(adjust_hue($red, 64), 6), 13);  //#fbdc14
+$green: desaturate(darken(adjust_hue($red, 102), 2), 11); //#73c620
+$blue: saturate(darken(adjust_hue($red, 201), 2), 1);     //#12b7d4
+$purple: saturate(darken(adjust_hue($red, 296), 2), 1);   //#a012d4
+$black: #777;
+$bgc: #fff;
+
+$colors: ( 
+  red: $red, 
+  orange: $orange, 
+  yellow: $yellow, 
+  green: $green, 
+  blue: $blue, 
+  purple: $purple, 
+  black: $black
+);
+
+@mixin swatchesDarken($color) {
+  @for $i from 1 through 10 {
+    $x: $i+11;
+    li:nth-child(#{$x}) {
+      $n: $i*5;
+      $bgc: darken($color, $n);
+      background-color: $bgc;
+      &:hover:before {
+        content: "#{$bgc}";
+        color: lighten($bgc, 40);
+      }
+    }
+  }
+}
+
+@mixin swatchesLighten($color) {
+  @for $i from 1 through 10 {
+    $x: 11-$i;
+    li:nth-child(#{$x}) {
+      $n: $i*5;
+      $bgc: lighten($color, $n);
+      background-color: $bgc;
+      &:hover:before {
+        content: "#{$bgc}";
+        color: darken($bgc, 40);
+      }
+    }
+  }
+}
+
+.swatches li {
+  width: 4.7619047619%;
+  float: left;
+  height: 60px;
+  list-style: none outside none;
+  &:hover:before {
+    font-family: verdana;
+    font-size: 8px;
+    padding: 2px;
+  }
+}
+
+@each $colorName,$color in $colors {
+  ul.#{''+$colorName} {
+    @include swatchesLighten($color);
+    @include swatchesDarken($color);
+    li:nth-child(11) {
+      background-color: $color;
+    }
+  }
+}

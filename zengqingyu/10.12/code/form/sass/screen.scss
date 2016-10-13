@@ -1,0 +1,128 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "normalize", "compass/css3";
+@import "variables", "mixin", "fnc";
+
+@include placeholder($pseudo-phprefix);
+
+.centerForm {
+	$width: 60%;
+	$height: 60%;
+	width: $width;
+	height: $height;	
+	min-width: 400px;
+	min-height: 430px;
+	padding: 40px 15px;
+	background-color: color(formBgc);
+	@include box-shadow;
+	@include hvCenter;
+	@include box-sizing(border-box);
+
+	&>div {
+		margin-top: 40px;
+	}
+
+	div:first-child{
+		margin-top: 0;
+	}
+
+	@at-root{
+		.avator {
+			@include flexbox((
+					display: flex,
+					flex-direction: row,
+					justify-content: center
+				));
+
+			div {
+				@include border-radius(50%);
+				width: 100px;
+				height: 100px;
+				background-color: color(avator);
+			}
+		}
+		
+		.input-name {
+			@extend .input-pw;
+			// ...
+		}
+
+		.input-pw {
+			$inputPadding: 5px 10px;
+			@extend %formDiv;
+			
+			input {				
+				@extend %inputBase;
+
+			  &:invalid {
+			    background: color(error);
+			    color: white;
+			  }
+
+			  &:invalid+label {
+			    color: white;
+			    &:after { 
+			    	background: color(error); 
+			    	z-index: 0;
+			    	content: "WRONG";
+			    	padding: $inputPadding;
+			    }
+			  }
+
+				&:focus {
+					outline: none;
+					@include box-shadow;
+					@include scaleX(1.1);
+
+					&+label {
+						@include transform(translateY(-100%));
+						color: white;
+						&:after {
+							@include transform(translateY(100%) scaleY(0));
+						}
+					}
+
+					&:invalid+label {
+						color: color(error);
+					}
+				}
+			}
+
+			label {
+				@include box-sizing(border-box);
+				position: absolute;
+				left:0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				padding: $inputPadding;
+				color: color(labelFont);
+				@include transform(translateY(0));
+				@include transition(transform .225s);
+
+				&:before,
+				&:after {
+					position: absolute;
+					left:0;
+					right:0;
+					content: '';
+					z-index: -1;
+					@include transition(transform .225s, opacity .225s);
+				}
+
+				&:before { transform: translateY(-100%); }
+
+				&:after {
+					@include border-radius(4px, 4px);
+					@include transform-origin(50%, 0%);
+					top: 0;
+					bottom: 0;
+					background-color: white;
+				}
+			}
+		}
+	}
+}

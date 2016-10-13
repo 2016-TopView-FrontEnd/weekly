@@ -1,0 +1,120 @@
+/* 重置placeholder（浏览器前缀） */
+@mixin placeholder($list){
+	@each $pre in $list {
+		@at-root {
+			#{$pre} {
+				color: map-get($colors, placeholder);
+			}
+		}
+	}
+}
+
+/* 垂直水平居中 */
+@mixin hvCenter($width: null, $height: null, $position: absolute){
+	$hasHeight: true;
+
+	position: $position;
+	@if($height == null){
+		top: 50%;
+		$hasHeight: false;
+		@include transform(translateY(-50%));
+	}@else if(unit($height) == "%"){
+		top: (100% - $height) / 2;
+	}@else{
+		top: 50%;
+		margin-top: -($height / 2);
+	}
+
+	@if($width == null){
+		left: 50%;
+		@if(not $hasHeight){
+			@include transform(translate(-50%, -50%));
+		}@else{
+			@include transform(translateX(-50%));
+		}
+	}@else if(unit($width) == "%"){
+		left: (100% - $width) / 2;
+	}@else{
+		left: 50%;
+		margin-left: -($width / 2);
+	}
+}
+
+/* mixin水平居中 */
+@mixin hCenter($width: null, $position: absolute){
+	position: $position;
+	@if($width == null){
+		left: 50%;
+		@include transform(translateX(-50%));
+	}@else if(unit($width) == "%"){
+		left: (100% - $width) / 2;
+	}@else{
+		left: 50%;
+		margin-left: -($width / 2);
+	}
+}
+
+/* % 水平居中 */
+%hCenter {
+	left: 50%;
+	@include transform(translateX(-50%));
+}
+
+/* input框基类 */
+%inputBase {
+	@include appearance(none);
+	@include border-radius(4px, 4px);
+	@include box-sizing(border-box);
+	@include transition(transform .225s);
+	
+	$inputPadding: 5px 10px;
+	padding: $inputPadding;
+	border: none;
+	background-color: map-get($colors, inputBgc);
+	color: map-get($colors, font);
+	width: 100%;
+	position: relative;
+}
+
+/* form中div基类 */
+%formDiv {
+	position: relative;
+	display: inline-block;
+	width: 40%;
+	min-width: 200px;
+	@extend %hCenter;
+}
+
+/* 嵌套label基类 */
+%nestLabelBase {
+	@include box-sizing(border-box);
+	position: absolute;
+	left:0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	padding: 5px 10px;
+	color: color(labelFont);
+	@include transform(translateY(0));
+	@include transition(transform .225s);
+
+	&:before,
+	&:after {
+		position: absolute;
+		left:0;
+		right:0;
+		content: '';
+		z-index: -1;
+		@include transition(transform .225s, opacity .225s);
+	}
+
+	&:before { transform: translateY(-100%); }
+
+	&:after {
+		@include border-radius(4px, 4px);
+		@include transform-origin(50%, 0%);
+		top: 0;
+		bottom: 0;
+		background-color: white;
+	}
+}
